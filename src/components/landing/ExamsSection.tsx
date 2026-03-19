@@ -9,7 +9,8 @@ const universities = [
     location: "Oxford, UK",
     exam: "LNAT",
     info: "One of the world's most prestigious law schools. Highly competitive entrance.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Oxford-university-logo.svg/320px-Oxford-university-logo.svg.png",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Arms_of_University_of_Oxford.svg/330px-Arms_of_University_of_Oxford.svg.png",
+    darkBg: false,
   },
   {
     name: "University of Cambridge",
@@ -18,6 +19,7 @@ const universities = [
     exam: "LNAT",
     info: "World-renowned for legal education and academic rigour.",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Coat_of_Arms_of_the_University_of_Cambridge.svg/200px-Coat_of_Arms_of_the_University_of_Cambridge.svg.png",
+    darkBg: false,
   },
   {
     name: "University College London (UCL)",
@@ -25,7 +27,8 @@ const universities = [
     location: "London, UK",
     exam: "LNAT",
     info: "Top-ranked faculty of laws with outstanding global reputation.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/UCL_logo.svg/320px-UCL_logo.svg.png",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/UCL_Logo%2C_plain_background.svg/500px-UCL_Logo%2C_plain_background.svg.png",
+    darkBg: false,
   },
   {
     name: "London School of Economics (LSE)",
@@ -33,7 +36,8 @@ const universities = [
     location: "London, UK",
     exam: "LNAT",
     info: "Leading institution for law, known for public and international law.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/LSE_Logo.svg/200px-LSE_Logo.svg.png",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/London_School_of_Economics_Coat_of_Arms.svg/500px-London_School_of_Economics_Coat_of_Arms.svg.png",
+    darkBg: false,
   },
   {
     name: "King's College London",
@@ -41,7 +45,8 @@ const universities = [
     location: "London, UK",
     exam: "LNAT",
     info: "Highly respected law school with strong industry connections.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/King%27s_College_London_logo.svg/320px-King%27s_College_London_logo.svg.png",
+    logo: "https://www.iied.org/sites/default/files/styles/page/public/logos/2023-09/kcl-logo_0.png.webp",
+    darkBg: false,
   },
   {
     name: "University of Bristol",
@@ -49,7 +54,8 @@ const universities = [
     location: "Bristol, UK",
     exam: "LNAT",
     info: "Renowned for its socio-legal research and academic excellence.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/University_of_Bristol_logo.svg/320px-University_of_Bristol_logo.svg.png",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Shield_of_the_University_of_Bristol.svg/330px-Shield_of_the_University_of_Bristol.svg.png",
+    darkBg: false,
   },
   {
     name: "University of Durham",
@@ -57,7 +63,8 @@ const universities = [
     location: "Durham, UK",
     exam: "LNAT",
     info: "Prestigious law school with strong Oxbridge-style teaching.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Durham_University_Logo.png/320px-Durham_University_Logo.png",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/University_of_Durham_arms.svg/500px-University_of_Durham_arms.svg.png",
+    darkBg: false,
   },
   {
     name: "University of Glasgow",
@@ -65,7 +72,8 @@ const universities = [
     location: "Glasgow, UK",
     exam: "LNAT",
     info: "Scotland's leading law school with international outlook.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/University_of_Glasgow_Crest.svg/200px-University_of_Glasgow_Crest.svg.png",
+    logo: "https://upload.wikimedia.org/wikipedia/en/8/81/UofG_Coat_of_Arms.png",
+    darkBg: false,
   },
   {
     name: "University of Nottingham",
@@ -73,7 +81,8 @@ const universities = [
     location: "Nottingham, UK",
     exam: "LNAT",
     info: "Top UK law school known for human rights and international law.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/The_University_of_Nottingham_logo.svg/320px-The_University_of_Nottingham_logo.svg.png",
+    logo: "https://www.nottingham.ac.uk/etc.clientlibs/uon/clientlibs/clientlib-site/resources/images/Logo-white.svg",
+    darkBg: true,
   },
   {
     name: "SUSS – Singapore University of Social Sciences",
@@ -81,7 +90,8 @@ const universities = [
     location: "Singapore",
     exam: "LNAT",
     info: "Singapore's premier law school accepting LNAT scores for law admissions.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Singapore_University_of_Social_Sciences_Logo.svg/320px-Singapore_University_of_Social_Sciences_Logo.svg.png",
+    logo: "https://www.suss.edu.sg/assets/images/logo.png",
+    darkBg: false,
   },
   {
     name: "IE University",
@@ -89,7 +99,8 @@ const universities = [
     location: "Madrid, Spain",
     exam: "LNAT",
     info: "Top-ranked European university with a globally recognised law programme.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/IE_University_Logo.svg/320px-IE_University_Logo.svg.png",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/IE_University_logo.svg/330px-IE_University_logo.svg.png",
+    darkBg: false,
   },
   {
     name: "OP Jindal Global University",
@@ -97,7 +108,8 @@ const universities = [
     location: "Sonipat, India",
     exam: "LNAT",
     info: "Important Update: Now accepts LNAT scores! India's top private law university.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Op_Jindal_Global_University_Logo.svg/320px-Op_Jindal_Global_University_Logo.svg.png",
+    logo: "https://jgu.edu.in/front/assets/img/logo-white.webp",
+    darkBg: true,
   },
 ];
 
@@ -133,7 +145,7 @@ const ExamsSection = () => {
                   className="bg-white border border-gray-100 shadow-sm p-4 flex gap-4 items-start"
                 >
                   {/* Logo */}
-                  <div className="w-16 h-16 shrink-0 bg-white border border-gray-100 flex items-center justify-center p-1.5 overflow-hidden">
+                  <div className={`w-16 h-16 shrink-0 border border-gray-100 flex items-center justify-center p-1.5 overflow-hidden ${university.darkBg ? "bg-gray-900" : "bg-white"}`}>
                     {university.logo ? (
                       <img
                         src={university.logo}

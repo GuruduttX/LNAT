@@ -31,8 +31,8 @@ const Footer = () => {
               className="h-28 w-auto object-contain"
             />
             <p className="font-body text-sm text-gray-400 leading-relaxed">
-              India's most trusted 3-Year LLB coaching institute, guiding students
-              to top law colleges including NLSIU, Faculty of Law DU, SLS Pune, and GLC Mumbai.
+              India's most trusted LNAT coaching institute, helping students secure
+              admissions to top UK law universities including Oxford, Cambridge, UCL, and LSE.
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <Clock className="w-4 h-4 text-primary shrink-0" />
@@ -53,11 +53,11 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               {[
-                { label: "3-Year LLB Courses", href: "#courses" },
+                { label: "LNAT Courses", href: "#courses" },
                 { label: "Why Choose Us", href: "#why-us" },
-                { label: "Top Law Colleges", href: "#exams" },
+                { label: "UK Universities", href: "#exams" },
                 { label: "Our Centers", href: "#centers" },
-                { label: "Toppers & Results", href: "#toppers" },
+                { label: "Student Testimonials", href: "#testimonials" },
                 { label: "Scholarship Programme", href: "#scholarship" },
                 { label: "Book Free Demo", href: "#demo" },
               ].map((l) => (
@@ -175,7 +175,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="font-body text-xs text-gray-500 text-center sm:text-left">
-            © 2025 Law Prep Tutorial. All rights reserved. | India's #1 3-Year LLB Coaching
+            © 2025 Law Prep Tutorial. All rights reserved. | India's #1 LNAT Coaching
           </p>
           <div className="flex gap-4">
             {["Privacy Policy", "Terms of Use", "Refund Policy"].map((l) => (

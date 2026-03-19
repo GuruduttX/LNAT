@@ -1,0 +1,102 @@
+import { motion } from "framer-motion";
+import { ClipboardCheck, PenLine, Brain, CompassIcon, User, GraduationCap } from "lucide-react";
+
+const features = [
+  {
+    icon: ClipboardCheck,
+    title: "Mock Tests & Feedback",
+    text: "Simulate real LNAT exams and get detailed section-wise insights.",
+    color: "bg-orange-100 text-orange-600",
+  },
+  {
+    icon: PenLine,
+    title: "Essay Excellence",
+    text: "Master structured, compelling essays with expert review.",
+    color: "bg-red-100 text-primary",
+  },
+  {
+    icon: Brain,
+    title: "Critical Thinking Skills",
+    text: "Boost logical reasoning through interactive exercises.",
+    color: "bg-yellow-100 text-yellow-600",
+  },
+  {
+    icon: CompassIcon,
+    title: "Application Guidance",
+    text: "Perfect your personal statements and shortlist top UK law schools.",
+    color: "bg-blue-100 text-blue-600",
+  },
+  {
+    icon: User,
+    title: "1-on-1 Mentorship",
+    text: "Personalized preparation plans and ongoing motivation.",
+    color: "bg-purple-100 text-purple-600",
+  },
+  {
+    icon: GraduationCap,
+    title: "Experienced Faculty",
+    text: "Top legal educators with decades of combined LNAT coaching experience.",
+    color: "bg-green-100 text-green-600",
+  },
+];
+
+const WhyChooseUs = () => {
+  return (
+    <section id="why-us" className="py-14 md:py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <h2
+          className="font-heading text-gray-900 text-center mb-2"
+          style={{ fontWeight: 900 }}
+        >
+          How We Support Your LNAT Success?
+        </h2>
+        <p className="font-body text-gray-500 text-center mb-10 text-sm md:text-[15px] max-w-2xl mx-auto">
+          We don't just teach — we build future lawyers for the world's best universities
+        </p>
+
+        <div className="grid lg:grid-cols-[1fr_350px] lg:gap-10 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-4">
+            {features.map((f, i) => (
+              <motion.div
+                key={f.title}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.06 }}
+                className="bg-white p-5 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4"
+              >
+                <div className={`w-10 h-10 flex items-center justify-center shrink-0 ${f.color}`}>
+                  <f.icon className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3
+                    className="font-heading text-gray-900 mb-1"
+                    style={{ fontWeight: 900, fontSize: "0.95rem" }}
+                  >
+                    {f.title}
+                  </h3>
+                  <p className="font-body text-sm text-gray-500 leading-relaxed">{f.text}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 16 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="hidden lg:block h-full w-full"
+          >
+            <img
+              src="/images/student_success.png"
+              alt="Happy law student on campus"
+              className="w-full h-full object-cover bg-gray-100"
+            />
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default WhyChooseUs;

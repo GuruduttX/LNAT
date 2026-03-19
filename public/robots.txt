@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /src/
+Disallow: /node_modules/
+
+Sitemap: https://lawpreptutorial.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

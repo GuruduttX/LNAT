@@ -14,8 +14,25 @@ import BrochureDownload from "@/components/landing/BrochureDownload";
 import Footer from "@/components/landing/Footer";
 import MobileBottomBar from "@/components/landing/MobileBottomBar";
 import WhatsAppButton from "@/components/landing/WhatsAppButton";
+import { useState, useEffect } from "react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import LeadForm from "@/components/landing/LeadForm";
 
 const Index = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    // Open the popup automatically after 1.5 seconds when user enters the website
+    const hasSeenPopup = sessionStorage.getItem("hasSeenEntryPopup");
+    if (!hasSeenPopup) {
+      const timer = setTimeout(() => {
+        setShowPopup(true);
+        sessionStorage.setItem("hasSeenEntryPopup", "true");
+      }, 1500);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen font-body pb-14 lg:pb-0">
       <header role="banner">
@@ -38,6 +55,21 @@ const Index = () => {
       <Footer />
       <MobileBottomBar />
       <WhatsAppButton />
+
+      {/* Auto-open entry popup */}
+      <Dialog open={showPopup} onOpenChange={setShowPopup}>
+        <DialogContent className="w-[90vw] sm:max-w-md p-0 overflow-hidden border-none bg-transparent shadow-2xl">
+          <div className="bg-primary px-6 py-4">
+            <p className="text-white font-heading font-black text-lg" style={{ letterSpacing: "-0.01em" }}>
+              Get Free Demo
+            </p>
+            <p className="text-white/80 text-xs font-body mt-0.5">Book a free LNAT session</p>
+          </div>
+          <div className="bg-white px-6 py-5">
+            <LeadForm compact />
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

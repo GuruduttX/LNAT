@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 import { lnatCourses } from "@/data/lnatData";
 import { ArrowLeft, Star, Calendar, Clock, Users, MapPin, CheckCircle, BookOpen, Phone, ChevronRight, Lock, X, Unlock } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -40,6 +41,11 @@ const CoursePage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO 
+        title={`${course.title} | Law Prep Tutorial LNAT`}
+        description={course.tagline}
+        canonicalUrl={`https://lawpreptutorial.com/course/${course.slug}`}
+      />
       {/* Top nav bar */}
       <div className="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="container mx-auto px-4 h-14 flex items-center gap-4">

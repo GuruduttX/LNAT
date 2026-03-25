@@ -12,12 +12,12 @@ const trustBadges = [
 ];
 
 const bgSlides = [
-  { label: "University of Oxford",             url: "/images/Gemini_Generated_Image_a5hrlva5hrlva5hr (1).png" },
-  { label: "University of Cambridge",          url: "/images/Gemini_Generated_Image_cac4t9cac4t9cac4.png" },
-  { label: "University College London (UCL)",  url: "/images/Gemini_Generated_Image_clhut4clhut4clhu.png" },
-  { label: "London School of Economics (LSE)", url: "/images/Gemini_Generated_Image_iua992iua992iua9.png" },
-  { label: "King's College London",            url: "/images/Gemini_Generated_Image_rzwjtnrzwjtnrzwj.png" },
-  { label: "University of Durham",             url: "/images/Gemini_Generated_Image_vxdcojvxdcojvxdc.png" },
+  { label: "University of Oxford",             url: "/images/Gemini_Generated_Image_a5hrlva5hrlva5hr (1).webp" },
+  { label: "University of Cambridge",          url: "/images/Gemini_Generated_Image_cac4t9cac4t9cac4.webp" },
+  { label: "University College London (UCL)",  url: "/images/Gemini_Generated_Image_clhut4clhut4clhu.webp" },
+  { label: "London School of Economics (LSE)", url: "/images/Gemini_Generated_Image_iua992iua992iua9.webp" },
+  { label: "King's College London",            url: "/images/Gemini_Generated_Image_rzwjtnrzwjtnrzwj.webp" },
+  { label: "University of Durham",             url: "/images/Gemini_Generated_Image_vxdcojvxdcojvxdc.webp" },
 ];
 
 const INTERVAL_MS = 5000;
@@ -62,6 +62,9 @@ const HeroSection = () => {
               alt={bgSlides[slideIdx].label}
               className="w-full h-full object-cover object-center"
               style={{ filter: "brightness(0.82)" }}
+              width="1920"
+              height="1080"
+              decoding="async"
               loading="eager"
             />
           </motion.div>

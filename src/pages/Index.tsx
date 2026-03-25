@@ -1,4 +1,5 @@
 import TopBar from "@/components/landing/TopBar";
+import SEO from "@/components/SEO";
 import Navbar from "@/components/landing/Navbar";
 import HeroSection from "@/components/landing/HeroSection";
 import CoursesSection from "@/components/landing/CoursesSection";
@@ -35,6 +36,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen font-body pb-14 lg:pb-0">
+      <SEO />
       <header role="banner">
         <TopBar />
         <Navbar />

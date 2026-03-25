@@ -149,15 +149,17 @@ const HeroSection = () => {
                     📅 Book Free Counselling
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-md p-0 overflow-hidden border-none bg-transparent shadow-2xl">
-                  <div className="bg-primary px-6 py-4">
-                    <p className="text-white font-heading font-black text-lg" style={{ letterSpacing: "-0.01em" }}>
-                      Get Free Demo
-                    </p>
-                    <p className="text-white/80 text-xs font-body mt-0.5">Book a free LNAT session — no commitment, no spam</p>
-                  </div>
-                  <div className="bg-white px-6 py-5">
-                    <LeadForm compact />
+                <DialogContent className="w-[95vw] sm:max-w-md p-0 max-h-[90vh] overflow-y-auto overflow-x-hidden border-none bg-transparent shadow-2xl [&>button]:text-white [&>button]:top-4 [&>button]:right-4">
+                  <div className="bg-white rounded-xl overflow-hidden flex flex-col">
+                    <div className="bg-primary px-6 py-4 shrink-0">
+                      <p className="text-white font-heading font-black text-lg" style={{ letterSpacing: "-0.01em" }}>
+                        Get Free Demo
+                      </p>
+                      <p className="text-white/80 text-xs font-body mt-0.5">Book a free LNAT session — no commitment, no spam</p>
+                    </div>
+                    <div className="bg-white px-2 sm:px-6 py-5 flex-1 overflow-y-auto">
+                      <LeadForm compact />
+                    </div>
                   </div>
                 </DialogContent>
               </Dialog>
@@ -248,15 +250,17 @@ const HeroSection = () => {
               📝 Get Free Counselling
             </Button>
           </DialogTrigger>
-          <DialogContent className="w-[90vw] sm:max-w-md p-0 overflow-hidden border-none bg-transparent shadow-2xl">
-            <div className="bg-primary px-6 py-4">
-              <p className="text-white font-heading font-black text-lg" style={{ letterSpacing: "-0.01em" }}>
-                Get Free Demo
-              </p>
-              <p className="text-white/80 text-xs font-body mt-0.5">Book a free LNAT session</p>
-            </div>
-            <div className="bg-white px-6 py-5">
-              <LeadForm compact />
+          <DialogContent className="w-[95vw] sm:max-w-md p-0 max-h-[90vh] overflow-y-auto overflow-x-hidden border-none bg-transparent shadow-2xl [&>button]:text-white [&>button]:top-4 [&>button]:right-4">
+            <div className="bg-white rounded-xl overflow-hidden flex flex-col">
+              <div className="bg-primary px-6 py-4 shrink-0">
+                <p className="text-white font-heading font-black text-lg" style={{ letterSpacing: "-0.01em" }}>
+                  Get Free Demo
+                </p>
+                <p className="text-white/80 text-xs font-body mt-0.5">Book a free LNAT session</p>
+              </div>
+              <div className="bg-white px-2 sm:px-6 py-5 flex-1 overflow-y-auto">
+                <LeadForm compact />
+              </div>
             </div>
           </DialogContent>
         </Dialog>

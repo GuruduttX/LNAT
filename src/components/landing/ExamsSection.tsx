@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { FileText, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -125,6 +126,9 @@ const exams = [
 ];
 
 const ExamsSection = () => {
+  const [showAll, setShowAll] = useState(false);
+  const displayedUniversities = showAll ? universities : universities.slice(0, 8);
+
   return (
     <section id="exams" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
@@ -152,8 +156,8 @@ const ExamsSection = () => {
         </div>
 
         {/* Universities Grid (4 cols on laptops, perfectly balanced) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 mb-16">
-          {universities.map((university, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 mb-8">
+          {displayedUniversities.map((university, i) => (
             <motion.div
               key={university.name}
               initial={{ opacity: 0, y: 16 }}
@@ -202,6 +206,18 @@ const ExamsSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {universities.length > 8 && (
+          <div className="flex justify-center mb-16">
+            <Button
+              onClick={() => setShowAll(!showAll)}
+              variant="outline"
+              className="px-8 h-12 font-bold font-heading text-sm uppercase tracking-wider border-2 hover:bg-gray-100 bg-white shadow-sm"
+            >
+              {showAll ? "Show Less" : "View All Universities"}
+            </Button>
+          </div>
+        )}
 
         {/* Bottom Banner: Exams Covered & CTA combined */}
         <motion.div 

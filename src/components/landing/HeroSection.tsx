@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import LeadForm from "./LeadForm";
 
 const trustBadges = [
   { icon: "⭐", text: "4.9 Rated" },
-  { icon: "🎯", text: "1600+ Selections" },
-  { icon: "👨‍🎓", text: "150K+ Students" },
-  { icon: "🏆", text: "6X AIR-1 Winners" },
+  { icon: "🎯", text: "500+ Selections" },
+  { icon: "👨‍🎓", text: "10k+ Students" },
 ];
 
 const bgSlides = [
@@ -141,15 +141,26 @@ const HeroSection = () => {
               transition={{ delay: 0.34 }}
               className="flex flex-wrap gap-3"
             >
-              <Button
-                onClick={() => {
-                  const el = document.getElementById("hero-form");
-                  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
-                className="w-full sm:w-auto bg-primary text-white rounded-none h-12 px-7 text-sm font-bold hover:bg-primary/90 shadow-none"
-              >
-                📅 Book Free Counselling
-              </Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button
+                    className="w-full sm:w-auto bg-primary text-white rounded-none h-12 px-7 text-sm font-bold hover:bg-primary/90 shadow-none cursor-pointer"
+                  >
+                    📅 Book Free Counselling
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-md p-0 overflow-hidden border-none bg-transparent shadow-2xl">
+                  <div className="bg-primary px-6 py-4">
+                    <p className="text-white font-heading font-black text-lg" style={{ letterSpacing: "-0.01em" }}>
+                      Get Free Demo
+                    </p>
+                    <p className="text-white/80 text-xs font-body mt-0.5">Book a free LNAT session — no commitment, no spam</p>
+                  </div>
+                  <div className="bg-white px-6 py-5">
+                    <LeadForm compact />
+                  </div>
+                </DialogContent>
+              </Dialog>
               <Button
                 asChild
                 variant="outline"
@@ -229,15 +240,26 @@ const HeroSection = () => {
 
       {/* Mobile sticky CTA */}
       <div className="lg:hidden fixed bottom-16 left-0 right-0 z-40 px-4 pb-2 pointer-events-none">
-        <Button
-          onClick={() => {
-            const el = document.getElementById("hero-form");
-            if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-          }}
-          className="w-full h-11 rounded-none bg-primary text-white text-sm font-bold shadow-md pointer-events-auto"
-        >
-          📝 Get Free Counselling
-        </Button>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button
+              className="w-full h-11 rounded-none bg-primary text-white text-sm font-bold shadow-md cursor-pointer pointer-events-auto"
+            >
+              📝 Get Free Counselling
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="w-[90vw] sm:max-w-md p-0 overflow-hidden border-none bg-transparent shadow-2xl">
+            <div className="bg-primary px-6 py-4">
+              <p className="text-white font-heading font-black text-lg" style={{ letterSpacing: "-0.01em" }}>
+                Get Free Demo
+              </p>
+              <p className="text-white/80 text-xs font-body mt-0.5">Book a free LNAT session</p>
+            </div>
+            <div className="bg-white px-6 py-5">
+              <LeadForm compact />
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );

@@ -36,12 +36,12 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <Clock className="w-4 h-4 text-primary shrink-0" />
-              <span>Mon–Sat: 8:00 AM – 8:00 PM</span>
+              <span>Mon–Sun: 10:00 AM – 8:00 PM</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <Mail className="w-4 h-4 text-primary shrink-0" />
-              <a href="mailto:info@lawpreptutorial.com" className="hover:text-white transition-colors">
-                info@lawpreptutorial.com
+              <a href="mailto:delhilawprep@gmail.com" className="hover:text-white transition-colors">
+                delhilawprep@gmail.com
               </a>
             </div>
           </div>
